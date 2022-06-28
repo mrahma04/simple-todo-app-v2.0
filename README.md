@@ -1,3 +1,5 @@
+## (Simple Todo App)[https://simpletodov41-vpuiu5m2oa-uc.a.run.app]
+
 ### Deploy to Google Cloud Run Using Buildpacks
 
 Google Cloud Build supports buildpacks natively which means the Pack tool does not need to be installed locally. 
@@ -16,7 +18,7 @@ Cloud Build will **NOT** run the `npm build` script for a production React app. 
 
 This is the prototypical workflow of deploying a containerized applicatin to Cloud Run.
 
-[Sample Config](https://cloud.google.com/community/tutorials/deploy-react-nginx-cloud-run)
+[React on Cloud Run Tutorial](https://cloud.google.com/community/tutorials/deploy-react-nginx-cloud-run)
 
 Dockerfile -> Cloud Build -> Container Image Artifcant -> Container Registry -> Cloud Run
 
