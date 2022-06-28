@@ -23,12 +23,18 @@ Dockerfile -> Cloud Build -> Container Image Artifcant -> Container Registry -> 
 Create the Dockerfile and nginx.conf files. Then build the Docker container image using the following command:
 
 ```
-gcloud builds submit --tag gcr.io/[cloud-run-500]/simpletodov4
+gcloud builds submit --tag gcr.io/[project-id]/simpletodov4
 ```
 
 NOTE
 
 Cloud Build will deploy a production version of React using this method. It uses a two-stage build where the initial container contains the `/buid` folder which is then copied to a **nginx** container and then deployed.
+
+Once the image is built and stored in **Container Registry**, you can deploy the service to **Cloud Run** using the following command:
+
+```
+gcloud run deploy --image gcr.io/[project-id]/simpletodov4 --platform managed
+```
 
 ### Notes
 
