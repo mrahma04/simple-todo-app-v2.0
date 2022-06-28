@@ -9,22 +9,31 @@ import {
   Divider,
 } from "@mui/material";
 
-const TaskItem = () => {
+const TaskItem = ({ task }) => {
   return (
-    <Card sx={{ width: "80%" }} variant="outlined">
-      <CardHeader title="Task #1"></CardHeader>
+    <Card sx={{ width: "80%", marginBottom: "1rem" }} variant="outlined">
+      <CardHeader title={task.title}></CardHeader>
       <Divider></Divider>
       <CardContent>
         <Typography variant="body2" sx={{ minHeight: "2rem" }}>
-          Task #1 Details
+          {task.details}
         </Typography>
       </CardContent>
       <Divider></Divider>
       <CardActions>
-        <Button variant="contained" size="small" onClick={() => console.log('clicked View')}>
+        <Button
+          variant="contained"
+          size="small"
+          onClick={() => console.log("clicked View")}
+        >
           View
         </Button>
-        <Button variant="contained" size="small" color='error' onClick={() => console.log('clicked Delete')}>
+        <Button
+          variant="contained"
+          size="small"
+          color="error"
+          onClick={() => console.log("clicked Delete")}
+        >
           Delete
         </Button>
       </CardActions>

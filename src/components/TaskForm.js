@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Box, TextField, Button, CardActions } from "@mui/material";
 
-const TaskForm = () => {
+import { v4 as uuidv4 } from "uuid";
+
+const TaskForm = ({ handleCreateTask }) => {
   const [inputValues, setInputValues] = useState({
     title: "",
     details: "",
@@ -16,7 +18,8 @@ const TaskForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("clicked Save", inputValues);
+    console.log("NEW INPUT VALUES AFTER CLICKING SAVE", inputValues);
+    handleCreateTask({ ...inputValues, id: uuidv4() });
   };
 
   return (
