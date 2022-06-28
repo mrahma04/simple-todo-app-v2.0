@@ -19,7 +19,7 @@ const Dashboard = () => {
         <Grid item xs={8}>
           <Container>
             <Typography variant="h3" gutterBottom>
-              Tasks
+              Tasks List
             </Typography>
             <TasksList tasksList={tasksList}></TasksList>
           </Container>
