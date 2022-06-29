@@ -13,6 +13,10 @@ const Dashboard = () => {
     setTasksList([...tasksList, task]);
   };
 
+  const handleDeleteTask = (id) => {
+    setTasksList(tasksList.filter((task) => task.id !== id));
+  };
+
   return (
     <Container>
       <Grid container px={{ xs: 10 }}>
@@ -21,7 +25,10 @@ const Dashboard = () => {
             <Typography variant="h3" gutterBottom>
               Tasks List
             </Typography>
-            <TasksList tasksList={tasksList}></TasksList>
+            <TasksList
+              tasksList={tasksList}
+              handleDeleteTask={handleDeleteTask}
+            ></TasksList>
           </Container>
         </Grid>
         <Grid item xs={4}>
