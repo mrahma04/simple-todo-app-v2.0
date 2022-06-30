@@ -9,7 +9,7 @@ import {
   Divider,
 } from "@mui/material";
 
-const TaskItem = ({ task, handleDeleteTask }) => {
+const TaskItem = ({ task, setSelectedTask, handleDeleteTask }) => {
   return (
     <Card sx={{ width: "80%", marginBottom: "1rem" }} variant="outlined">
       <CardHeader title={task.title}></CardHeader>
@@ -24,6 +24,7 @@ const TaskItem = ({ task, handleDeleteTask }) => {
         <Button
           variant="contained"
           size="small"
+          onClick={() => setSelectedTask(task)}
         >
           View
         </Button>

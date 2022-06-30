@@ -15,6 +15,10 @@ const Dashboard = () => {
     setTasksList(tasksList.filter((task) => task.id !== id));
   };
 
+  const [selectedTask, setSelectedTask] = useState(null);
+
+  console.log("RED", selectedTask);
+
   return (
     <Container>
       <Grid container px={{ xs: 10 }}>
@@ -25,6 +29,7 @@ const Dashboard = () => {
             </Typography>
             <TasksList
               tasksList={tasksList}
+              setSelectedTask={setSelectedTask}
               handleDeleteTask={handleDeleteTask}
             ></TasksList>
           </Container>
@@ -35,6 +40,8 @@ const Dashboard = () => {
           </Typography>
           <TaskForm
             handleCreateTask={handleCreateTask}
+            selectedTask={selectedTask}
+            key={selectedTask ? selectedTask.id : null}
           ></TaskForm>
         </Grid>
       </Grid>
