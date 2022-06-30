@@ -46,3 +46,5 @@ gcloud run deploy --image gcr.io/[project-id]/simpletodov4 --platform managed
 ### Notes
 
 Might need to run `gcloud auth configure-docker` after setting up `gcloud`
+
+Testing Twilio integration
