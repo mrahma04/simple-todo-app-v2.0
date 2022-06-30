@@ -7,8 +7,6 @@ import { Container, Grid, Typography } from "@mui/material";
 const Dashboard = () => {
   const [tasksList, setTasksList] = useState(tasks);
 
-  console.log(tasksList);
-
   const handleCreateTask = (task) => {
     setTasksList([...tasksList, task]);
   };
@@ -35,7 +33,9 @@ const Dashboard = () => {
           <Typography variant="h3" gutterBottom>
             Add Tasks
           </Typography>
-          <TaskForm handleCreateTask={handleCreateTask}></TaskForm>
+          <TaskForm
+            handleCreateTask={handleCreateTask}
+          ></TaskForm>
         </Grid>
       </Grid>
     </Container>

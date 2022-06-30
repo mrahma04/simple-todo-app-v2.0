@@ -24,7 +24,6 @@ const TaskItem = ({ task, handleDeleteTask }) => {
         <Button
           variant="contained"
           size="small"
-          onClick={() => console.log("clicked View", task.id)}
         >
           View
         </Button>

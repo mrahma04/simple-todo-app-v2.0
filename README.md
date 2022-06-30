@@ -1,5 +1,9 @@
 ## Simple Todo App
-[Link](https://simpletodov41-vpuiu5m2oa-uc.a.run.app)
+[Link](https://simpletodov5.stippled.art)
+
+### Continuous Deployment on Cloud Run
+
+This App is configured for continuous deployment using Cloud Run integration with GitHub. Any time a push is made to `main` branch, Cloud Run will trigger a new Cloud Build process and then update the image to the new container.
 
 ### Deploy to Google Cloud Run Using Buildpacks
 

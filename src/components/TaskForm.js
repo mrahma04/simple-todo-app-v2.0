@@ -4,10 +4,13 @@ import { Box, TextField, Button, CardActions } from "@mui/material";
 import { v4 as uuidv4 } from "uuid";
 
 const TaskForm = ({ handleCreateTask }) => {
-  const [inputValues, setInputValues] = useState({
+
+  const initializeForm =  {
     title: "",
     details: "",
-  });
+  };
+
+  const [inputValues, setInputValues] = useState(initializeForm);
 
   const updateValues = (event) => {
     setInputValues({
@@ -20,6 +23,7 @@ const TaskForm = ({ handleCreateTask }) => {
     event.preventDefault();
     console.log("NEW INPUT VALUES AFTER CLICKING SAVE", inputValues);
     handleCreateTask({ ...inputValues, id: uuidv4() });
+    setInputValues(initializeForm)
   };
 
   return (
