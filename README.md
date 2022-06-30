@@ -45,4 +45,6 @@ gcloud run deploy --image gcr.io/[project-id]/simpletodov4 --platform managed
 
 ### Notes
 
+Hello
+
 Might need to run `gcloud auth configure-docker` after setting up `gcloud`
