@@ -17,6 +17,15 @@ const Dashboard = () => {
 
   const [selectedTask, setSelectedTask] = useState(null);
 
+  const updateSelectedTask = (selectedTask) => {
+    setTasksList(
+      tasksList.map((task) =>
+        task.id === selectedTask.id ? selectedTask : task
+      )
+    );
+    setSelectedTask(null); // need to set the state back to 'null', otherwise form will remain populated with original state
+  };
+
   console.log("RED", selectedTask);
 
   return (
@@ -42,6 +51,7 @@ const Dashboard = () => {
             handleCreateTask={handleCreateTask}
             selectedTask={selectedTask}
             key={selectedTask ? selectedTask.id : null}
+            updateSelectedTask={updateSelectedTask}
           ></TaskForm>
         </Grid>
       </Grid>
