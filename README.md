@@ -25,7 +25,7 @@ This is the prototypical workflow of deploying a containerized applicatin to Clo
 
 [React on Cloud Run Tutorial](https://cloud.google.com/community/tutorials/deploy-react-nginx-cloud-run)
 
-Dockerfile -> Cloud Build -> Container Image Artifcant -> Container Registry -> Cloud Run
+Dockerfile -> Cloud Build -> Container Image Artifcact -> Container Registry -> Cloud Run
 
 Create the Dockerfile and nginx.conf files. Then build the Docker container image using the following command:
 
